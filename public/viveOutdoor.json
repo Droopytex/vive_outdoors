@@ -1,1 +1,19 @@
-[{}]
+[
+  {
+    "nombre": "Juan",
+    "apellido1": "Pérez",
+    "apellido2": "Rojas",
+    "rut": "123456-7",
+    "telefono": "+569 999 999 23",
+    "e-mail": "jperez@gmail.com"
+  },
+
+  {
+    "nombre": "Ana",
+    "apellido1": "Jofré",
+    "apellido2": "Ramírez",
+    "rut": "890356-2",
+    "telefono": "+569 900 111 98",
+    "e-mail": "ana@gmail.com"
+  }
+]
