@@ -29,7 +29,7 @@ const CustomNavbar = () => {
       <Navbar bg="dark" variant="dark" expand="lg">
         <Navbar.Brand href="#">
           <img
-            src="https://via.placeholder.com/30"
+            src="./logo_100x100.png"
             alt="Logo"
             className="d-inline-block align-top"
           />
@@ -43,8 +43,14 @@ const CustomNavbar = () => {
             <Nav.Link href="#">Accesorios</Nav.Link>
           </Nav>
           <Form inline className="ml-3">
-            <FormControl type="text" placeholder="Buscar" className="mr-sm-2" />
-            <Button variant="outline-light">Buscar</Button>
+            <div className="d-flex m-2">
+              <FormControl
+                type="text"
+                placeholder="Buscar"
+                className="mr-sm-2"
+              />
+              <Button variant="outline-light">Buscar</Button>
+            </div>
           </Form>
           <Nav.Link href="#" className="text-white">
             <i className="fas fa-shopping-cart"></i>

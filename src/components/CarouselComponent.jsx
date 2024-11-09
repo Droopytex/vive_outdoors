@@ -1,5 +1,5 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import React from "react";
+import { Carousel } from "react-bootstrap";
 
 const CarouselComponent = () => {
   return (
@@ -7,7 +7,7 @@ const CarouselComponent = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400?text=Imagen+1"
+          src="./imag_bann_1.png"
           alt="Primera imagen"
         />
         <Carousel.Caption>
@@ -18,7 +18,7 @@ const CarouselComponent = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400?text=Imagen+2"
+          src="./imag_bann_2.png"
           alt="Segunda imagen"
         />
         <Carousel.Caption>
@@ -29,7 +29,7 @@ const CarouselComponent = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400?text=Imagen+3"
+          src="./imag_bann_3.png"
           alt="Tercera imagen"
         />
         <Carousel.Caption>

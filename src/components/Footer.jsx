@@ -72,43 +72,8 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="https://via.placeholder.com/50?text=WebPay"
-                  alt="WebPay"
-                  className="mx-2"
-                />
+                <img src="./webpayplus.png" alt="WebPay" className="mx-2" />
               </a>
-              <a
-                href="https://www.mercadopago.cl"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://via.placeholder.com/50?text=MercadoPago"
-                  alt="MercadoPago"
-                  className="mx-2"
-                />
-              </a>
-              <img
-                src="https://via.placeholder.com/50?text=Visa"
-                alt="Visa"
-                className="mx-2"
-              />
-              <img
-                src="https://via.placeholder.com/50?text=Mastercard"
-                alt="Mastercard"
-                className="mx-2"
-              />
-              <img
-                src="https://via.placeholder.com/50?text=PayPal"
-                alt="PayPal"
-                className="mx-2"
-              />
-              <img
-                src="https://via.placeholder.com/50?text=Amex"
-                alt="American Express"
-                className="mx-2"
-              />
             </div>
           </Col>
         </Row>

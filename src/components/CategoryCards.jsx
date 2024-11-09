@@ -6,22 +6,22 @@ const CategoryCards = () => {
     {
       title: "Carpas",
       description: "Encuentra tu carpa.",
-      imgSrc: "https://via.placeholder.com/150?text=Carpas",
+      imgSrc: "./categorias_carpa.png",
     },
     {
       title: "Mochilas",
       description: "Equipate con la mochila ideal.",
-      imgSrc: "https://via.placeholder.com/150?text=Mochilas",
+      imgSrc: "./categorias_moch.png",
     },
     {
       title: "Sacos & Colchonetas",
       description: "Todo para dormir.",
-      imgSrc: "https://via.placeholder.com/150?text=Sacos & Colchonetas",
+      imgSrc: "./categorias_saco.png",
     },
     {
       title: "Accesorios",
       description: "Equipamiento para tus actividades.",
-      imgSrc: "https://via.placeholder.com/150?text=Accesorios",
+      imgSrc: "./categorias_acc.png",
     },
   ];
 

@@ -1,5 +1,5 @@
-import React from "react";
-import CustomNavbar from "../components/Navbar";
+//import React from "react";
+//import CustomNavbar from "../components/Navbar";
 import CarouselComponent from "../components/CarouselComponent";
 import CategoryCards from "../components/CategoryCards";
 import FeaturedProducts from "../components/FeaturedProducts";
