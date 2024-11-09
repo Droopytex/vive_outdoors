@@ -4,24 +4,24 @@ import { Card, Col, Row } from "react-bootstrap";
 const FeaturedProducts = () => {
   const products = [
     {
-      title: "Producto 1",
-      imgSrc: "https://via.placeholder.com/150?text=Producto+1",
+      title: "Carpa Neltume Lime",
+      imgSrc: "/carpa1.webp",
     },
     {
-      title: "Producto 2",
-      imgSrc: "https://via.placeholder.com/150?text=Producto+2",
+      title: "Mochila Intense 20L Lippi",
+      imgSrc: "/mochila.webp",
     },
     {
-      title: "Producto 3",
-      imgSrc: "https://via.placeholder.com/150?text=Producto+3",
+      title: "Lafuma Saco de dormir Active",
+      imgSrc: "/public/saco.webp",
     },
     {
-      title: "Producto 4",
-      imgSrc: "https://via.placeholder.com/150?text=Producto+4",
+      title: "Pack Cocina Doite Astra",
+      imgSrc: "/public/cocinilla.webp",
     },
     {
-      title: "Producto 5",
-      imgSrc: "https://via.placeholder.com/150?text=Producto+5",
+      title: "Colchoneta Z-Lite Therm-a-rest",
+      imgSrc: "/public/colchoneta-z-lite.jpg",
     },
   ];
 
