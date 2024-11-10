@@ -1,17 +1,16 @@
-import React, { useContext, useState } from 'react';
-import { AuthContext } from "../context/AuthProvider";
+import { useContext, useState } from 'react';
+import { AuthContext } from "../../context/AuthProvider";
 
 const Register = () => {
   const { register } = useContext(AuthContext);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState("cliente"); // por defecto "client"
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    register({ username, password, role: "cliente" });
-    console.log('Register:', { username, email, password, role });
+    register({ username, password, rol: "cliente" });
+    console.log('Register:', { username, email, password, rol });
   };
 
   return (

@@ -2,12 +2,11 @@ import { Routes, Route } from "react-router-dom";
 
 // importar vistas
 import Footer from "./components/Footer";
-import Login from "./components/Auth/Login";
-import Register from "./components/Auth/Register";
 import Home from "./pages/Home";
 import AdminDashboard from "./pages/AdminDashboard";
 import UserDashboard from "./pages/UserDashboard";
 import CustomNavbar from "./components/Navbar";
+import Account from "./pages/Account";
 
 const App = () => {
   return (
