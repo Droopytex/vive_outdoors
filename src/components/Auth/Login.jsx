@@ -1,50 +1,45 @@
-import React, { useContext, useState } from "react";
-import { Form, Button, Card } from "react-bootstrap";
+import {useContext, useState } from 'react';
 import { AuthContext } from "../../context/AuthProvider";
 
-const LoginForm = () => {
+const Login = () => {
   const { login } = useContext(AuthContext);
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmitLogin = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     login(email, password);
-    console.log('Login:', formData);
+    console.log('Login:', { email, password });
   };
 
   return (
-    <Card className="card-custom">
-      <Card.Body>
-        <Card.Title className="text-center">Ya Tengo Cuenta</Card.Title>
-        <Form onSubmit={handleSubmitLogin}>
-          {/* Campos del formulario */}
-          <Form.Group controlId="formEmailLogin" className="mb-3">
-            <Form.Control
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder="Ingresa tu correo electrónico"
-              className="border-lila"
-            />
-          </Form.Group>
-          {/* Agrega los demás campos */}
-          <Button variant="dark" type="submit" className="button-custom mt-3">
-            Iniciar Sesión
-          </Button>
-        </Form>
-      </Card.Body>
-    </Card>
+    <div className="container mt-5">
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <input
+            type="email"
+            className="form-control"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit" className="btn btn-primary">Ingresar</button>
+      </form>
+    </div>
   );
 };
 
-export default LoginForm;
+export default Login;

@@ -14,81 +14,43 @@ const Register = () => {
   };
 
   return (
-    <Card className="card-custom">
-      <Card.Body>
-        <Card.Title className="text-center">Nuevo Cliente</Card.Title>
-        <Form onSubmit={handleSubmitRegister}>
-          <Form.Group controlId="formNombre" className="mb-3">
-            <Form.Control
-              type="text"
-              name="nombre"
-              value={formData.nombre}
-              onChange={handleChange}
-              required
-              placeholder="Ingresa tu nombre"
-              className="border-lila"
-            />
-          </Form.Group>
-          <Form.Group controlId="formApellido" className="mb-3">
-            <Form.Control
-              type="text"
-              name="apellido"
-              value={formData.apellido}
-              onChange={handleChange}
-              required
-              placeholder="Ingresa tu apellido"
-              className="border-lila"
-            />
-          </Form.Group>
-          <Form.Group controlId="formTelefono" className="mb-3">
-            <Form.Control
-              type="tel"
-              name="telefono"
-              value={formData.telefono}
-              onChange={handleChange}
-              required
-              placeholder="Ingresa tu teléfono"
-              className="border-lila"
-            />
-          </Form.Group>
-          <Form.Group controlId="formEmailRegister" className="mb-3">
-            <Form.Control
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder="Ingresa tu correo electrónico"
-              className="border-lila"
-            />
-          </Form.Group>
-          <Form.Group controlId="formPasswordRegister" className="mb-3">
-            <Form.Control
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-              placeholder="Crea una contraseña"
-              className="border-lila"
-            />
-          </Form.Group>
-          <Form.Group controlId="formConfirmPassword" className="mb-3">
-            <Form.Control
-              type="password"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              required
-              placeholder="Confirma tu contraseña"
-              className="border-lila"
-            />
-          </Form.Group>
-          <Button variant="dark" type="submit" className="button-custom mt-3">
-            Registrar
-          </Button>
-        </Form>
-      </Card.Body>
-    </Card>
+    <div className="container mt-5">
+      <h2>Registro</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            type="email"
+            className="form-control"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit" className="btn btn-primary">Registrarse</button>
+      </form>
+    </div>
   );
 };
+
+export default Register;
