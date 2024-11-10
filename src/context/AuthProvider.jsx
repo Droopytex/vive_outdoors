@@ -52,7 +52,7 @@ const AuthProvider = ({ children }) => {
   const register = (newUser) => {
     // Simulación de registro (esto usualmente implicaría una llamada a una API)
     // registrar un nuevo usuario y simula agregarlo a un archivo JSON
-    const usersData = import("/vive_outdoors/public/users.json");
+    const usersData = import("../../public/users.json");
     usersData.push(newUser);
     
   };

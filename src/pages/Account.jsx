@@ -1,6 +1,6 @@
 
-import RegisterForm from "../components/RegisterForm";
-import LoginForm from "../components/LoginForm";
+import RegisterForm from "../components/Auth/Register";
+import LoginForm from "../components/Auth/Login";
 
 const Account = () => {
     return (
