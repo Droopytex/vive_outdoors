@@ -22,7 +22,7 @@ Este proyecto fue desarrollado utilizando:
 
 ## Descripción del Proyecto
 
-Este proyecto fue realizado como parte de un desafío en **Desafío Latam**. A través de esta tienda virtual, los usuarios pueden explorar y adquirir productos relacionados con actividades al aire libre, como camping, senderismo y deportes extremos.
+Este proyecto esta realizado como parte del desafío final de **Desarrollador Full stack Js** en **Desafío Latam**. A través de esta tienda virtual, los usuarios podrán explorar y adquirir productos relacionados con actividades al aire libre, como carpas, sacos y colchones, mochilas y accesorios.
 
 ## Características
 
