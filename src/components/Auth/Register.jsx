@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from "../context/AuthProvider";
 
 const Register = () => {
+  const { register } = useContext(AuthContext);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState("cliente"); // por defecto "client"
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Register:', { username, email, password });
+    register({ username, password, role: "cliente" });
+    console.log('Register:', { username, email, password, role });
   };
 
   return (
     <div className="container mt-5">
-      <h2>Register</h2>
+      <h2>Registro</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <input
@@ -44,7 +48,7 @@ const Register = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">Register</button>
+        <button type="submit" className="btn btn-primary">Registrarse</button>
       </form>
     </div>
   );
