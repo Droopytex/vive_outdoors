@@ -9,6 +9,7 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null); // Estado para almacenar los datos del usuario autenticado
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Estado para verificar autenticación, si el usuario ha iniciado sesión.
+  const [role, setRole] = useState(null); // Almacena el rol del usuario ("admin" o "client")
 
   useEffect(() => {
     // Al cargar, se puede verificar si el usuario está autenticado (por ejemplo, chequeando un token en localStorage)
@@ -16,6 +17,7 @@ const AuthProvider = ({ children }) => {
     if (storedUser) {
       setUser(storedUser);
       setIsAuthenticated(true);
+      setRole(storedUser.role);
     }
   }, []);
 
@@ -31,6 +33,7 @@ const AuthProvider = ({ children }) => {
     if (foundUser) {
       setUser(foundUser);
       setIsAuthenticated(true);
+      setRole(foundUser.role); // Guarda el rol del usuario (admin o client)
       localStorage.setItem("user", JSON.stringify(foundUser)); // Persistencia en localStorage
       return true;
     } else {
@@ -42,6 +45,7 @@ const AuthProvider = ({ children }) => {
   const logout = () => { //Limpia el estado del usuario y elimina cualquier persistencia.
     setUser(null);
     setIsAuthenticated(false);
+    setRole(null);
     localStorage.removeItem("user"); // Limpia la persistencia
   };
 
@@ -58,6 +62,7 @@ const AuthProvider = ({ children }) => {
       value={{
         user,
         isAuthenticated,
+        role, // Exponemos el rol para usarlo en otros componentes
         login,
         logout,
         register,
