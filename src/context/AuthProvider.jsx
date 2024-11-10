@@ -9,7 +9,7 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null); // Estado para almacenar los datos del usuario autenticado
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Estado para verificar autenticación, si el usuario ha iniciado sesión.
-  const [role, setRole] = useState(null); // Almacena el rol del usuario ("admin" o "client")
+  const [rol, setRol] = useState(null); // Almacena el rol del usuario ("admin" o "client")
 
   useEffect(() => {
     // Al cargar, se puede verificar si el usuario está autenticado (por ejemplo, chequeando un token en localStorage)
@@ -17,14 +17,14 @@ const AuthProvider = ({ children }) => {
     if (storedUser) {
       setUser(storedUser);
       setIsAuthenticated(true);
-      setRole(storedUser.role);
+      setRol(storedUser.rol);
     }
   }, []);
 
   const login = (username, password) => {
     // Simulación de autenticación (en una app real, harías una llamada a una API)
 
-    const usersData = require("./vive_outdoors/public/users.json");
+    const usersData = import ("../../public/users.json");
     const foundUser = usersData.find(
       (user) => user.username === username && user.password === password
     );
@@ -33,7 +33,7 @@ const AuthProvider = ({ children }) => {
     if (foundUser) {
       setUser(foundUser);
       setIsAuthenticated(true);
-      setRole(foundUser.role); // Guarda el rol del usuario (admin o client)
+      setRol(foundUser.rol); // Guarda el rol del usuario (admin o client)
       localStorage.setItem("user", JSON.stringify(foundUser)); // Persistencia en localStorage
       return true;
     } else {
@@ -45,14 +45,14 @@ const AuthProvider = ({ children }) => {
   const logout = () => { //Limpia el estado del usuario y elimina cualquier persistencia.
     setUser(null);
     setIsAuthenticated(false);
-    setRole(null);
+    setRol(null);
     localStorage.removeItem("user"); // Limpia la persistencia
   };
 
   const register = (newUser) => {
     // Simulación de registro (esto usualmente implicaría una llamada a una API)
     // registrar un nuevo usuario y simula agregarlo a un archivo JSON
-    const usersData = require("/vive_outdoors/public/users.json");
+    const usersData = import("/vive_outdoors/public/users.json");
     usersData.push(newUser);
     
   };
@@ -62,7 +62,7 @@ const AuthProvider = ({ children }) => {
       value={{
         user,
         isAuthenticated,
-        role, // Exponemos el rol para usarlo en otros componentes
+        rol, // Exponemos el rol para usarlo en otros componentes
         login,
         logout,
         register,
