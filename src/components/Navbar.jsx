@@ -27,7 +27,7 @@ const CustomNavbar = () => {
 
       {/* Menú principal */}
       <Navbar bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="/">
           <img
             src="./logo_100x100.png"
             alt="Logo"
@@ -37,10 +37,11 @@ const CustomNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="#">Sale</Nav.Link>
-            <Nav.Link href="#">Carpas</Nav.Link>
-            <Nav.Link href="#">Sacos & Colchonetas</Nav.Link>
-            <Nav.Link href="#">Accesorios</Nav.Link>
+            <Nav.Link href="/sale">Sale</Nav.Link>
+            <Nav.Link href="/carpas">Carpas</Nav.Link>
+            <Nav.Link href="/mochilas">Mochilas</Nav.Link>
+            <Nav.Link href="/sacos&colchonetas">Sacos & Colchonetas</Nav.Link>
+            <Nav.Link href="/accesorios">Accesorios</Nav.Link>
           </Nav>
           <Form inline className="ml-3">
             <div className="d-flex m-2">
