@@ -4,8 +4,8 @@ import { createContext, useEffect, useState } from "react";
 export const viveContext = createContext();
 
 const viveOutdoorProvider = ({ children }) => {
-  const [producto, setProducto] = useState([]);
-  const [carrito, setCarrito] = useState([]);
+  const [producto, setProducto] = useState([]); //arreglo para almacenar los productos disponibles
+  const [carrito, setCarrito] = useState([]); //arreglo para almacenar los productos agregados al carrito
 
   useEffect(() => {
     getProductos();
