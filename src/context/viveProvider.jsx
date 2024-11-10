@@ -20,7 +20,7 @@ const viveOutdoorProvider = ({ children }) => {
 
   function agregarCarrito({ id_producto, nombre, precio, foto }) {
     const producto = { id_producto, nombre, precio, foto, count: 1 };
-    const indiceProductos = carrito.findIndex((item) => item.id === id);  //busca si el producto está en el carrito
+    const indiceProductos = carrito.findIndex((item) => item.id_producto === id_producto);  //busca si el producto está en el carrito
     if (indiceProductos >= 0) {
       carrito[indiceProductos].count++; //si el producto ya existe, incrementa la cantidad del producto
       setCarrito([...carrito]);
@@ -29,16 +29,16 @@ const viveOutdoorProvider = ({ children }) => {
     }
   }
 
-  const sumarCantidad = (id) => {  // incrementa la cantidad de un producto en el carrito
+  const sumarCantidad = (id_producto) => {  // incrementa la cantidad de un producto en el carrito
     const nuevoCarrito = carrito.map((item) =>
-      item.id === id ? { ...item, count: item.count + 1 } : item
+      item.id_producto === id_producto ? { ...item, count: item.count + 1 } : item
     );
     setCarrito(nuevoCarrito);
   };
 
-  const restarCantidad = (id) => { //reduce la cantidad de un producto y elimina el producto si la cantidad llega a cero
+  const restarCantidad = (id_producto) => { //reduce la cantidad de un producto y elimina el producto si la cantidad llega a cero
     const nuevoCarrito = carrito.map((item) =>
-        item.id === id ? { ...item, count: item.count - 1 } : item
+        item.id_producto === id_producto ? { ...item, count: item.count - 1 } : item
       )
       .filter((item) => item.count > 0);
     setCarrito(nuevoCarrito);
