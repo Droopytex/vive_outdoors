@@ -1,6 +1,6 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
+// importar vistas
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -11,7 +11,7 @@ import CustomNavbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <Router>
+    <>
       <CustomNavbar />
       <main>
         <Routes>
@@ -24,7 +24,7 @@ const App = () => {
       </main>
 
       <Footer />
-    </Router>
+    </>
   );
 };
 
