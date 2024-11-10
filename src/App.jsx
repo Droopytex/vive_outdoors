@@ -1,17 +1,16 @@
-import { Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // importar vistas
 import Footer from "./components/Footer";
+import Login from "./components/Ingreso";
+import Register from "./components/Ingreso";
 import Home from "./pages/Home";
 import AdminDashboard from "./pages/AdminDashboard";
 import UserDashboard from "./pages/UserDashboard";
 import CustomNavbar from "./components/Navbar";
 import Account from "./pages/Account";
-import Sale from "./pages/CategoriaSale";
-import SacosColchonetas from "./pages/CategorySacos";
-import Carpas from "./pages/CategoriaCarpa";
-import Mochilas from "./pages/CategoriaMochilas";
-import Accesorios from "./pages/CategoriaAccesorios";
+import Ingreso from "./components/Ingreso";
 
 const App = () => {
   return (
@@ -20,20 +19,13 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sale" element={<Sale />} />
-          <Route path="/carpas" element={<Carpas />} />
-          <Route path="/mochilas" element={<Mochilas />} />
-          <Route path="/sacos&colchonetas" element={<SacosColchonetas />} />
-          <Route path="/accesorios" element={<Accesorios />} />
-
-          {/* <Route path="/login" element={<Login />} /> */}
-          {/* <Route path="/register" element={<Register />} /> */}
-          <Route path="/account" element={<Account />} />
+          <Route path="/login" element={<Ingreso />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/user" element={<UserDashboard />} />
+          <Route path="/account" element={<Account />} />
         </Routes>
       </main>
-
       <Footer />
     </>
   );
