@@ -1,4 +1,4 @@
-Aquí tienes un texto para el README de tu tienda virtual "Vive Outdoors":
+
 
 ---
 
