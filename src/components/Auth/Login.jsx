@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, {useContext, useState } from 'react';
+import { AuthContext } from ".../context/AuthProvider";
 
 const Login = () => {
+  const { login } = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    login(email, password);
     console.log('Login:', { email, password });
   };
 
@@ -33,7 +36,7 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">Login</button>
+        <button type="submit" className="btn btn-primary">Ingresar</button>
       </form>
     </div>
   );
