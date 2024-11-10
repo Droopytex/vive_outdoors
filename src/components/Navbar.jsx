@@ -53,9 +53,15 @@ const CustomNavbar = () => {
               <Button variant="outline-light">Buscar</Button>
             </div>
           </Form>
-          <Nav.Link href="#" className="text-white">
-            <i className="fas fa-shopping-cart"></i>
-          </Nav.Link>
+          <Nav className="ml-2">
+            {/* Enlace al perfil de usuario */}
+            <Nav.Link href="/account" className="text-white">
+              <i className="fas fa-user"></i>
+            </Nav.Link>
+            <Nav.Link href="#" className="text-white">
+              <i className="fas fa-shopping-cart"></i>
+            </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     </>
