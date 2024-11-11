@@ -16,12 +16,18 @@ const Account = () => {
     confirmPassword: "",
   });
 
+    // Estado para datos de login
+    const [loginData, setLoginData] = useState({
+      email: "",
+      password: "",
+    });
+
   const [usuarios, setUsuarios] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/user"); // Redirige si está autenticado
+      navigate("/dashboard"); // Redirige al dashboard tras autenticación
     }
   }, [isAuthenticated, navigate]);
 
