@@ -49,6 +49,29 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
    ```bash
    npm run dev
    ```
+## Imágenes del Desarrollo logrado
+
+Vista del Home: 
+
+![Captura de pantalla 2024-11-10 215734](https://github.com/user-attachments/assets/7cf170e3-54b3-4eb7-8d85-3aae4277d740)
+
+
+Vista de /account donde se muestran ambos formularios: 
+
+![Captura de pantalla 2024-11-10 215708](https://github.com/user-attachments/assets/1bd25242-905b-40af-b09f-806d32abcdce)
+
+
+Al ingresar datos en formulario login, redirecciona a dashboard:
+
+![Captura de pantalla 2024-11-10 211751](https://github.com/user-attachments/assets/8ecb05c6-d24a-41ee-a1ef-f5401cfaab86)
+
+
+Vistas (incompletas) de los dashboards de "cliente" y "admin": 
+
+![Captura de pantalla 2024-11-10 215748](https://github.com/user-attachments/assets/cdcf248a-a8d4-4192-bc58-4aedba513301)
+
+![Captura de pantalla 2024-11-10 215756](https://github.com/user-attachments/assets/745d55b5-f1df-4be3-9233-8e15b2068d88)
+
 
 ## Contribuciones
 
