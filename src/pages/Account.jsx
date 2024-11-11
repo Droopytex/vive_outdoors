@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
-import "../styles.css"; // Asegúrate de tener este archivo para estilos personalizados
+import "../styles.css"; // archivo para estilos personalizados
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 const Account = () => {
+  const { login, isAuthenticated } = useContext(AuthContext);
+
   const [formData, setFormData] = useState({
     nombre: "",
     apellido: "",
@@ -13,6 +17,13 @@ const Account = () => {
   });
 
   const [usuarios, setUsuarios] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/user"); // Redirige si está autenticado
+    }
+  }, [isAuthenticated, navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,16 +51,17 @@ const Account = () => {
     });
 
     console.log("Usuario registrado:", newUser);
+    alert("Usuario registrado con éxito");
   };
 
   const handleSubmitLogin = (e) => {
     e.preventDefault();
-    const loginData = {
-      email: formData.email,
-      password: formData.password,
-    };
-
-    console.log("Iniciar sesión:", loginData);
+    const success = login(formData.email, formData.password);
+    if (success) {
+      navigate("/user"); // Redirige a /user tras autenticación exitosa
+    } else {
+      console.log("Credenciales incorrectas");
+    }
   };
 
   return (

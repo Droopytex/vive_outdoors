@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import "../styles.css"; // Asegúrate de tener este archivo para estilos personalizados
 

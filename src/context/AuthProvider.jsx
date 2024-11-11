@@ -21,26 +21,32 @@ const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  const login = (username, password) => {
-    // Simulación de autenticación (en una app real, harías una llamada a una API)
+  const login = async (username, password) => {
+    try {
+      const response = await fetch("/users.json"); 
+      const usersData = await response.json();
 
-    const usersData = import ("../../public/users.json");
-    const foundUser = usersData.find(
-      (user) => user.username === username && user.password === password
-    );
+      const foundUser = usersData.find(
+        (user) => user.username === username && user.password === password
+      );
 
     // si es exitoso guarda el usuario en un local storage
-    if (foundUser) {
-      setUser(foundUser);
-      setIsAuthenticated(true);
-      setRol(foundUser.rol); // Guarda el rol del usuario (admin o client)
-      localStorage.setItem("user", JSON.stringify(foundUser)); // Persistencia en localStorage
-      return true;
-    } else {
-      alert("Credenciales Incorrectas, intente de nuevo"); //mensaje en caso de error
+      if (foundUser) {
+        setUser(foundUser);
+        setIsAuthenticated(true);
+        setRol(foundUser.rol); // Guarda el rol del usuario (admin o client)
+        localStorage.setItem("user", JSON.stringify(foundUser)); // Persistencia en localStorage
+        return true;
+      } else {
+        alert("Credenciales Incorrectas, intente de nuevo"); //mensaje en caso de error
+        return false;
+      }
+    } catch (error) {
+      console.error("Error al cargar users.json:", error);
       return false;
     }
   };
+
 
   const logout = () => { //Limpia el estado del usuario y elimina cualquier persistencia.
     setUser(null);
