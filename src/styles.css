@@ -112,3 +112,15 @@ footer {
   color: #2c5282;
   font-size: 1.1rem;
 }
+
+.galeria {
+  margin-top: 20px;
+}
+
+.card {
+  transition: transform 0.2s; /* Animación al pasar el mouse */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Escala al pasar el mouse */
+}
