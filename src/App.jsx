@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import AdminDashboard from "./pages/AdminDashboard";
 import UserDashboard from "./pages/UserDashboard";
 import CustomNavbar from "./components/Navbar";
-import Account from "./pages/Account";
+import Account from "./components/Account";
 import NotFound from "./pages/NotFound";
 import CategorySacos from "./pages/CategorySacos";
 import DetalleImagen from "./components/DetalleImagen";
